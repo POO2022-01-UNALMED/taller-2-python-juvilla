@@ -35,10 +35,11 @@ class Auto:
         if self.registro!=self.motor.registro:
             return "Las piezas no son originales"
         for i in self.asientos:
-            if i==self.registro:
-                continue
-            else:
-                return "Las piezas no son originales"
+            if i != None:
+                if i==self.registro:
+                    continue
+                else:
+                    return "Las piezas no son originales"
         return "Auto original"      
 class Motor:
     def __init__(self,numeroCilindros,tipo,registro):
